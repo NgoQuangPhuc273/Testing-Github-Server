@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <meta http-equiv="refresh" content="3" > -->
+    <title>Trang chủ</title>
+    <link rel="stylesheet" href="home.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gugi&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Inline&display=swap" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+
+</head>
+<body>
+    <section>
+        <header>
+            <ul>
+                <li ></li>
+                <li><a href="home.html">Trang chủ</a></li> 
+                <li><a href="ranking.html">Xếp hạng</a></li>
+                <li><a href="rate.html">Đánh giá</a></li>
+                <li class="sign-up"><a href="login.html"><i class="far fa-user-circle"></i></a></li>
+            </ul>
+            <div class="banner-project">
+                <img width="400px" src="Untitled-1.png" alt="">
+                
+            </div>
+            <div></div>
+            <div class="search-box">
+                <input class="search-txt" type="text" name="search" placeholder="Tìm kiếm giáo viên" id="search">
+                <a class= "search-btn" href="#">
+                    <i class="fas fa-search"></i>
+                </a>
+            </div>
+            <ul class="list-group" id="list"></ul>
+        </header>
+        <br>
+        <br>
+            <div class="container">
+                <div class="card">
+                    <div class="face face1">
+                        <div class="content">
+                            <h3>Giới thiệu</h3>
+                        </div>
+                    </div>
+                    <div class="face face2">
+                        <div class="content">
+                            <p>Ams Teachers được xây dựng với mục đích....</p>
+                            <a href="#" onclick="toggle()">Tìm hiểu thêm</a>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="card">
+                    <div class="face face1">
+                        <div class="content">
+                            <h3>Xếp hạng</h3>
+                        </div>
+                    </div>
+                    <div class="face face2">
+                        <div class="content">
+                            <p>Ai sẽ là giáo viên được Amser yêu quý nhất?....</p>
+                            <a href="#" onclick="toggle3()">Tìm hiểu thêm</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="container1">
+                <div class="card">
+                    <div class="face face1">
+                        <div class="content">
+                            <h3>Đánh giá</h3>
+                        </div>
+                    </div>
+                    <div class="face face2">
+                        <div class="content">
+                            <p>Tự đánh giá theo trải nghiệm bản thân hoặc....</p>
+                            <a href="#" onclick="toggle1()">Tìm hiểu thêm</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="popup1">
+                    <h2>Đánh giá</h2>
+                    <p>Với Ams Teachers, ngoài xem lại những bình luận, đánh giá khách quan nhất từ những người đi trước, các bạn còn có thể tự mình để lại những đánh giá và bình luận dựa trên trải nghiệm của chính bản thân mình qua mục "Đánh giá giáo viên". 
+
+                    </p>
+                    <p>Tất cả sẽ được lưu lại trên chính trang web, qua đó thể hiện được rõ ràng và chân thực nhất về chất lượng học tập và đời sống xã hội ở Ams.</p>
+                    <a href="#" onclick="toggle1()">Đóng</a>
+                </div>
+                <script type="text/javascript">
+                    function toggle1()
+                    {
+                        var popup1 = document.getElementById('popup1');
+                        console.log(popup1);
+                        
+                        popup1.classList.toggle('active');
+                    }
+                </script>
+            </div>
+
+
+            <div id="popup">
+                <h2>Tổng quan dự án</h2>
+                <p>
+                    Ams Teachers được xây dựng với mục đích giúp những em khóa dưới sắp theo học ở trường Ams có sự chuẩn bị tốt nhất cho bản thân qua hệ thống đánh giá dựa trên trải nghiệm của những anh chị khóa trên với các thầy cô trong trường.
+                </p>
+                <p>
+                    Qua Ams Teachers, các em không chỉ có được cái nhìn khách quan nhất về không chỉ về những giáo viên trong trường mà còn cả 1 bức tranh thu nhỏ của 3 năm cấp 3 ở Ams, 1 xã hội thu nhỏ muôn màu đang đợi trước mắt. 
+                </p>
+                <a href="#" onclick="toggle()">Đóng</a>
+            </div>
+            <div id="popup2">
+                <h2>Xếp hạng</h2>
+                <p>Những con số không nói dối!</p>
+                <p>Bảng xếp hạng của Ams Teachers là công cụ chính xác và đơn giản nhất nếu bạn muốn tìm hiểu về đời sống ở Ams. Phương pháp dạy học, điểm chác và cả độ "thoải mái" của từng giáo viên trong từng tiết học đều được thống kê và sắp xếp theo thứ tự 
+                    yêu thích của học sinh. 
+                </p>
+                <p>Không chỉ là đơn thuần là 1 bảng xếp hạng khô khan, Ams Teachers mang đến 1 không gian mở cho những Amsers tự do thể hiện ý kiến cá nhân theo 1 cách khách quan nhất.</p>
+                <a href="#" onclick="toggle3()">Đóng</a>
+            </div>
+            <script type="text/javascript">
+                function toggle3()
+                {
+                    var popup2 = document.getElementById('popup2');
+                    console.log(popup2);
+                    
+                    popup2.classList.toggle('active');
+                }
+            </script>
+            
+            <script type="text/javascript">
+                function toggle()
+                {
+                    var popup = document.getElementById('popup');
+                    popup.classList.toggle('active');
+                }
+            </script>
+        
+         
+    </section>
+
+</script>
+<script src="home.js"></script>
+</body>
+</html>

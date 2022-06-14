@@ -1,0 +1,27 @@
+body
+    {
+    width: 100%;
+    }
+  
+  #container
+  {
+      background-color: orange;
+  }
+  
+  #wrapper
+  {
+    color: white;
+    width: 200px;
+    height: 200px;
+  }
+  
+  #wrapper:hover
+  {
+    background-color: red;
+  }
+  
+  #container p
+  {
+    opacity: 0;
+    transition: 0.5s;
+  }

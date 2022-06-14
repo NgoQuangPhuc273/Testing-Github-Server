@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Đăng ký</title>
+    <link rel="stylesheet" href="signUp.css">
+    <link rel="icon" href="./Logohanoiamsterdam.jpg">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gugi&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    
+    <form class="login-form">
+        <h1>Đăng ký</h1>
+
+        <div class="txtb">
+            <input id="username" type="text" placeholder="Tên tài khoản mới">
+            
+        </div>
+
+        <div class="txtb">
+            <input id="pass" type="password" placeholder="Mật khẩu mới (trên 8 ký tự)">
+            
+        </div>
+
+        <div class="txtb">
+            <input type="password" placeholder="Nhập lại mật khẩu">
+            
+        </div>
+        <div class="txtb">
+            <input id="fb" type="text" placeholder="Đường link facebook của bạn">
+            
+        </div>
+        <label>
+            <!-- <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me -->
+          </label>
+          <a class="logbtn" type="button" onclick="checkData();" value="Đăng ký">Đăng ký</a> 
+          
+          <button id="backhome"><a href="home.html">Về trang chủ</a></button>
+
+    </form>
+    
+
+    
+    <script type="text/javascript">
+        $(".txtb input").on("focus",function(){
+            $(this).addClass("focus");
+        });
+
+        $(".txtb input").on("blur",function(){
+            if($(this).val() == "")
+            $(this).removeClass("focus");
+        });
+    </script>
+
+            <!-- The core Firebase JS SDK is always required and must be listed first -->
+            <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-firestore.js"></script>
+    
+    
+            <!-- TODO: Add SDKs for Firebase products that you want to use
+                https://firebase.google.com/docs/web/setup#available-libraries -->
+    
+            <script>
+            // Your web app's Firebase configuration
+            var firebaseConfig = {
+                apiKey: "AIzaSyBPN3-e3UBhNCYV3ctKbt0_U7ed-mvGPes",
+                authDomain: "amsteacher2-bad47.firebaseapp.com",
+                databaseURL: "https://amsteacher2-bad47.firebaseio.com",
+                projectId: "amsteacher2-bad47",
+                storageBucket: "amsteacher2-bad47.appspot.com",
+                messagingSenderId: "459069232796",
+                appId: "1:459069232796:web:ed2d07d2fd53b93a3aff59"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            var db = firebase.firestore();
+    
+    
+            function checkData() {
+                var docRef = db.collection("users").doc(document.getElementById("username").value);
+    
+                docRef.get().then(function(doc) {
+                    if (doc.exists) {
+                        alert("Tên tài khoản đã tồn tại!");
+                    } else {
+                        // doc.data() will be undefined in this case
+                        // Add a new document in collection "cities"
+                    docRef.set({
+                        username: document.getElementById("username").value,
+                        pass: document.getElementById("pass").value,
+                        linkfb: document.getElementById("fb").value
+                    
+                    }, {merge: true})
+                    .then(function() {
+                        console.log("Document successfully written!");
+                        localStorage.username = document.getElementById("username").value;
+                        localStorage.pass = document.getElementById("pass").value;
+                        localStorage.fb = document.getElementById("fb").value;
+                        window.location = "./home.html";
+                    })
+                    .catch(function(error) {
+                        console.error("Error writing document: ", error);
+                    });
+                    }
+                }).catch(function(error) {
+                    console.log("Error getting document:", error);
+                });
+            }
+</script>
+</body>
+</html>

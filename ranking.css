@@ -1,0 +1,262 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Merriweather', serif;
+}
+
+header {
+    padding: 0 100px;
+    width: 100%;
+    height: 80px;
+    box-sizing: border-box;
+    background: linear-gradient(120deg, rgb(133, 93, 93),rgb(180, 67, 67),rgb(58, 52, 52)  );
+    box-shadow: 0 8px 15px rgba(0, 0, 0, .2);
+    transition: .5s;
+    position: sticky;
+    top: 0;
+    /* display: inline-block;
+    position: fixed; */
+}
+ul {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    float: right;
+    transition: .5s;
+    
+}
+li {
+    list-style: none;
+}
+ul li a {
+    position: relative;
+    display: block;
+    left: 30px;
+    padding: 10px 20px;
+    margin: 20px 0;
+    height: 20px;
+    border-radius: 70px;
+    text-transform: uppercase;
+    text-decoration: none ;
+    font-weight: bold;
+    transition: .5s;   
+    color:  #fff;
+    box-shadow: -2px -2px -8px rgba(255, 255, 255, 1),
+    -2px -2px -12px rgba(255, 255, 255, .5),
+    inset 2px 2px 4px rgba(255, 255, 255, .1),
+    2px 2px 8px rgba(255, 255, 255, 1),
+    
+}
+ul li a:hover {
+    background: #fff; 
+    color: rgb(180, 67, 67) ;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+    transition-delay: .1s;
+}
+
+.sign-up {
+        font-size: 18px;
+}
+
+.banner-project
+    {
+    position: relative;
+    left: 35%;
+    display: inline-block;
+    transition: .5s;
+    top: 20px;
+    
+    }
+
+.search-box
+{
+  position: absolute; 
+  top: 15%; 
+  left: 4%;
+  background: #fff; 
+  height: 30px;
+  border-radius: 40px;
+  padding: 10px;
+  color: #fff;
+  box-shadow: 0 20px 15px rgba(0, 0, 0, .2);
+
+}
+.search-box:hover > .search-txt
+{
+    width: 200px;
+    padding: 0 6px;
+}
+.search-btn{
+    color:  rgb(180, 67, 67);
+    float: right;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #fff; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* box-shadow: 0 5px 15px rgba(0, 0, 0, .2); */
+}
+
+.search-txt {
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0px ;
+    font-size: 15px;
+    font-family: 'Merriweather', serif;
+    transition: 0.4s;
+    line-height: 30px;
+    width: 0px;
+    color:   rgb(180, 67, 67);
+    /* box-shadow: 0 5px 15px rgba(0, 0, 0, .2); */
+}
+
+#topchart{
+    font-size: 30px;
+    font-family: 'Montserrat', cursive;
+    font-weight: 800;
+    margin: auto;
+    width: 80%;
+    text-align: center;
+    color: rgb(180, 67, 67);
+    padding: 10px;
+}
+
+.monhoc {
+    padding: 10px;
+    height: 50px;
+    box-sizing: border-box;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Montserrat', cursive;
+    padding-left: 20px;
+    display: inline-block;
+}
+
+#danhsach>div {
+    /* background: linear-gradient(120deg,rgb(217, 189, 174),rgb(235, 177, 115),rgb(255,255,255)); */
+    background-color: white;
+    margin: 15px;
+    height: 170px;
+    box-sizing: border-box;
+    box-shadow:   4px 4px 8px 0 rgba(0, 0, 0, 0.2), 4px 6px 20px 0 rgba(0, 0, 0, 0.19);;
+}
+
+.anhgv {
+    width: 170px;
+    height: 170px;
+    display: inline-block;
+    /* float: left; */
+}
+
+.clearfix{
+    width: auto;
+}
+
+.clearfix .thongtin {
+    display: inline-block;
+    margin-left: 15px;
+    padding-bottom: 30px;
+    position: static;
+}
+
+.table{
+    position: relative;
+    top: -22px;
+}
+
+.table #ten {
+    font-size: 30px;
+    padding-top: 21px;
+}
+
+.ranking {
+    font-size: 13px;
+    color: rgb(38, 184, 9);
+    /* margin-bottom: 5px; */
+
+}
+
+.table .danhgia {
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.table #score{
+    border-bottom: 20px;
+    padding-bottom: 25px;
+}
+
+.xemtatca{
+    float: right;
+    font-size: 20px;
+    font-family: 'Montserrat', cursive;
+    color: white;
+    margin-top: 12px;
+    margin-right: 15px;
+    text-decoration: none;
+    border-bottom: 0px solid white;
+}
+
+.xemtatca:hover{
+    border-bottom: 1px solid white;
+}
+
+
+.banner{
+    background: linear-gradient(120deg, rgb(133, 93, 93),rgb(180, 67, 67),rgb(58, 52, 52)  );
+    width: 100%;
+}
+
+.shortcut {
+    font-weight: bold;
+    font-family: 'Montserrat', cursive;
+    padding: 10px;
+    padding-bottom: 1px;
+    /* background: linear-gradient(120deg, rgb(133, 93, 93),rgb(180, 67, 67),rgb(58, 52, 52)  ); */
+    margin-left: 20px;
+    border-radius: 1px;
+    display: inline-block;
+    width: 120px;
+    text-align: center;
+    border-bottom: 0px solid white;
+}
+
+.shortcut>a {
+    text-decoration: none;
+    color:rgb(180, 67, 67);
+    
+}
+
+.shortcut :hover {
+    border-bottom: 2px solid rgb(180, 67, 67);
+    font-weight: bolder;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 12% 88%;
+}
+
+#shortcut-block {
+    height: 650px;
+    position: sticky;
+    top: 140px;
+    left: 0;
+    /* background: linear-gradient(90deg, sandybrown, rgb(211, 185, 38)); */
+    /* background: linear-gradient(90deg, rgb(133, 93, 93),rgb(180, 67, 67),rgb(58, 52, 52)  ); */
+    /* background-color:#f1f1f1; */
+}
+
+#menu {
+    font-family: 'Montserrat', cursive;
+    font-weight: bolder;
+    font-size: 30px;
+    text-align: center;
+    color: rgb(180, 67, 67);;
+}
